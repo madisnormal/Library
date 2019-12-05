@@ -24,9 +24,10 @@ public class ModelTest {
         Model model = new Model();
         assertNotNull(model.startSearchInMonography("Einstein"));
     }
+    @Test
+    public void startSearchInArticle() {
+        Model model = new Model();
+        assertNotNull(model.startSearchInArticle("qwerty"));
 
-//    @Test
-//    public void startSearchInArticle() {
-//
-//    }
+    }
 }
