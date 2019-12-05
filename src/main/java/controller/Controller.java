@@ -15,12 +15,19 @@ public class Controller {
         this.model = model;
         this.view = view;
     }
+
     public void processUser() {
         Scanner sc = new Scanner(System.in);
         String userInput = inputHandler(sc);
         if (!model.compareInput(userInput)) processUser();
 
     }
+
+    /**
+     *
+     * @param sc
+     * @return String
+     */
     String inputHandler(Scanner sc){
         view.printBundle(INPUT_INVITATION);
         return sc.nextLine();

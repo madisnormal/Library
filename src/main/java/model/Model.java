@@ -9,8 +9,16 @@ public class Model {
 
     public Model() {
     }
+
+    //Utility variables
     boolean indicator = false;
     boolean isLinkFound = false;
+
+    /**
+     *
+     * @param input
+     * @return
+     */
     public boolean compareInput(String input){
         if (input.trim().length() == 0) return false;
         view.printBundle(StringConstants.INPUT_ANSWER);
@@ -23,6 +31,11 @@ public class Model {
         return decideFinder(monography, article);
     }
 
+    /**
+     *
+     * @param input
+     * @return
+     */
     public Monography startSearchInMonography(String input){
         Monography monographyTemp = null;
         isLinkFound = false;
@@ -36,6 +49,12 @@ public class Model {
         }
         return !isLinkFound ? null : monographyTemp;
     }
+
+    /**
+     *
+     * @param input
+     * @return
+     */
     public Article startSearchInArticle(String input){
         Article articleTemp = null;
         isLinkFound = false;
@@ -49,6 +68,13 @@ public class Model {
         }
         return !isLinkFound ? null : articleTemp;
     }
+
+    /**
+     *
+     * @param monography
+     * @param article
+     * @return
+     */
     private boolean decideFinder(Monography monography, Article article) {
         if (monography != null && article != null) linksFinders.linksFinder(monography, article);
         else if (monography != null) linksFinders.linksFinder(monography);

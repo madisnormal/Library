@@ -12,6 +12,11 @@ public class View {
                     //,new Locale("en", "US")
                     ,new Locale("ru", "RU")
             );
+
+    /**
+     *
+     * @param message
+     */
     public void printMessage(String message){
         System.out.println(message);
     }
