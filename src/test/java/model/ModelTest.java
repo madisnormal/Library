@@ -14,6 +14,11 @@ public class ModelTest {
         Model model = new Model();
         assertTrue(model.compareInput("asd"));
     }
+    @Test
+    public void compareNullInput(){
+        Model model = new Model();
+        assertFalse(model.compareInput(""));
+    }
 //    @Test
 //    public void startSearchInMonography() {
 //
