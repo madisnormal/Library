@@ -12,6 +12,7 @@ public class Model {
     boolean indicator = false;
     boolean isLinkFound = false;
     public boolean compareInput(String input){
+        if (input.trim().length() == 0) return false;
         view.printMessage(StringConstants.INPUT_ANSWER);
         Monography monography = startSearchInMonography(input);
         Article article = startSearchInArticle(input);
