@@ -19,11 +19,12 @@ public class ModelTest {
         Model model = new Model();
         assertFalse(model.compareInput(""));
     }
-//    @Test
-//    public void startSearchInMonography() {
-//
-//    }
-//
+    @Test
+    public void startSearchInMonography() {
+        Model model = new Model();
+        assertNotNull(model.startSearchInMonography("Einstein"));
+    }
+
 //    @Test
 //    public void startSearchInArticle() {
 //
