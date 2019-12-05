@@ -9,11 +9,11 @@ public class ModelTest {
         Model model = new Model();
         assertTrue(model.compareInput("Einstein"));
     }
-//    @Test
-//    public void compareInputArticle(){
-//        Model model = new Model();
-//        assertTrue(model.compareInput("asd"));
-//    }
+    @Test
+    public void compareInputArticle(){
+        Model model = new Model();
+        assertTrue(model.compareInput("asd"));
+    }
 //    @Test
 //    public void startSearchInMonography() {
 //
