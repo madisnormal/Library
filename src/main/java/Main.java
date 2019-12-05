@@ -1,9 +1,6 @@
-
 import controller.Controller;
 import model.Model;
 import view.View;
-
-import java.sql.SQLException;
 
 public class Main {
 

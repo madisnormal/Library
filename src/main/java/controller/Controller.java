@@ -3,11 +3,13 @@ package controller;
 import model.Model;
 import view.StringConstants;
 import view.View;
+import static view.StringConstants.*;
 import java.util.Scanner;
 
 public class Controller {
     private Model model;
     private View view;
+
 
     public Controller(Model model, View view){
         this.model = model;
@@ -20,7 +22,7 @@ public class Controller {
 
     }
     String inputHandler(Scanner sc){
-        view.printMessage(StringConstants.INPUT_INVITATION);
+        view.printBundle(INPUT_INVITATION);
         return sc.nextLine();
     }
 }

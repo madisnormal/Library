@@ -13,11 +13,11 @@ public class Model {
     boolean isLinkFound = false;
     public boolean compareInput(String input){
         if (input.trim().length() == 0) return false;
-        view.printMessage(StringConstants.INPUT_ANSWER);
+        view.printBundle(StringConstants.INPUT_ANSWER);
         Monography monography = startSearchInMonography(input);
         Article article = startSearchInArticle(input);
         if (!indicator) {
-            view.printMessage(StringConstants.INPUT_WRONG);
+            view.printBundle(StringConstants.INPUT_WRONG);
             return false;
         }
         return decideFinder(monography, article);
@@ -42,7 +42,7 @@ public class Model {
         for (EnumArticle temp : EnumArticle.values()){
             articleTemp = new Article(temp.getTitle(), temp.getAuthor(), temp.getPublisher(), temp.getLinks());
             if (articleTemp.compareStr().contains(input)){
-                view.printMessage(StringConstants.ANSI_BRIGHT_PURPLE + articleTemp.toString() + StringConstants.ANSI_RESET);
+                view.printMessage(StringConstants.ANSI_BRIGHT_PURPLE + articleTemp.toString() + StringConstants.ANSI_RESET + "");
                 indicator = isLinkFound = true;
                 break;
             }

@@ -36,9 +36,9 @@ public class LinksFinders {
 
     private void examineResult(StringBuilder result) {
         if (!result.toString().equals("") && !result.toString().equals("-")) {
-            view.printMessage(StringConstants.INPUT_LINKS);
+            view.printBundle(StringConstants.INPUT_LINKS);
             view.printMessage(result.toString());
-        } else view.printMessage(StringConstants.INPUT_HAS_NO_LINKS);
+        } else view.printBundle(StringConstants.INPUT_HAS_NO_LINKS);
     }
     private void searchArticle(String[] monoLinksArray, StringBuilder result) {
         for (EnumArticle temp : EnumArticle.values()) {
