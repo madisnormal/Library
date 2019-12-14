@@ -40,7 +40,7 @@ public class Model {
         Monography monographyTemp = null;
         isLinkFound = false;
         for (EnumMonography temp : EnumMonography.values()){
-            monographyTemp = new Monography(temp.getTitle(), temp.getAuthor(), temp.getPublisher(), temp.getLinks());
+            monographyTemp = new Monography(temp.getTitle(), temp.getAuthor(), temp.getPublisher(), temp.getLinks(), temp.getPages());
             if (monographyTemp.compareStr().contains(input)){
                 view.printMessage(StringConstants.ANSI_BRIGHT_BLUE + monographyTemp.toString() + StringConstants.ANSI_RESET);
                 indicator = isLinkFound = true;
@@ -59,7 +59,7 @@ public class Model {
         Article articleTemp = null;
         isLinkFound = false;
         for (EnumArticle temp : EnumArticle.values()){
-            articleTemp = new Article(temp.getTitle(), temp.getAuthor(), temp.getPublisher(), temp.getLinks());
+            articleTemp = new Article(temp.getTitle(), temp.getAuthor(), temp.getPublisher(), temp.getLinks(), temp.getType());
             if (articleTemp.compareStr().contains(input)){
                 view.printMessage(StringConstants.ANSI_BRIGHT_PURPLE + articleTemp.toString() + StringConstants.ANSI_RESET + "");
                 indicator = isLinkFound = true;

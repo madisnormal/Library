@@ -10,6 +10,7 @@ public enum EnumArticle {
     private String author;
     private String publisher;
     private String links;
+    private String type;
 
     public String getTitle() {
         return title;
@@ -25,6 +26,10 @@ public enum EnumArticle {
 
     public String getLinks() {
         return links;
+    }
+
+    public String getType() {
+        return type;
     }
 
     EnumArticle(String title, String author, String publisher, String links) {

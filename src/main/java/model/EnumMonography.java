@@ -6,6 +6,12 @@ public enum EnumMonography {
     MONOGRAPHY3("The collected papers of Albert Einstein", "Albert Einstein", "EPP", "-") ,
     MONOGRAPHY4("What is life? : the physical aspect of the living cell", "Erwin Schrödinger", "Trinity College", "The collected papers of Albert Einstein");
 
+    private String title;
+    private String author;
+    private String publisher;
+    private String links;
+    private String pages;
+
     public String getTitle() {
         return title;
     }
@@ -22,10 +28,9 @@ public enum EnumMonography {
         return links;
     }
 
-    private String title;
-    private String author;
-    private String publisher;
-    private String links;
+    public String getPages() {
+        return pages;
+    }
 
     EnumMonography(String title, String author, String publisher, String links) {
         this.title=title;
